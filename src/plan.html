@@ -1,0 +1,75 @@
+<div data-role="header" class="header">
+    <a href="#homepage" data-transition="slidefade"
+       class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-back ui-btn-icon-notext ui-shadow"></a>
+
+    <h1>Diet Plan</h1>
+    <a href="#settings" class="ui-btn-right ui-btn ui-corner-all  ui-btn-icon-notext ui-shadow ui-icon-gear"></a>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#plan" data-transition="slidefade">Diet Plan</a></li>
+            <li><a href="#bmi">BMI Calculator</a></li>
+        </ul>
+    </div>
+</div>
+<div data-role="main" class="ui-content">
+    <form>
+        <div class="ui-field-contain">
+            <label for="date-plan">Date:</label> <%- date %>
+        </div>
+        <div class="ui-field-contain">
+            <label for="goal-plan">GOAL:</label>
+            <input type="text" name="title" id="goal-plan" value="<%- goal %>"/>
+        </div>
+        <div class="food-block">
+            <label for="food-plan">Food:</label>
+
+            <div class="food">
+                <% _.each(food, function(f, fIndex){ %>
+                <div class="inline-form">
+                    <div class="wrapper">
+                        <div class="content">
+                            <select name="food[]" id="food-existing-<%- fIndex %>">
+                                <option value="" selected="selected">Select Food</option>
+                                <% _.each(calories, function(calorie, index){ %>
+                                <option value="<%- index %>"
+                                <% if(f == index) {%>selected="selected" <%}%> ><%- calorie[0] %> (<%- calorie[1]%>)  - <%- calorie[2] %></option>
+                                <% }); %>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <button class="ui-btn ui-btn-inline ui-btn-corner-all ui-btn ui-icon-delete ui-btn-icon-notext ui-shadow delete-food"></button>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <button class="ui-btn ui-icon-plus ui-btn-corner-all ui-btn-icon-left  add-food">Add Food</button>
+        </div>
+        <div class="ui-field-contain">
+            <label for="left-plan">Calories left:</label>
+
+            <p class="calories-left"><%- left %></p>
+        </div>
+        <div class=" center-wrapper ">
+            <button class="ui-btn ui-btn-inline ui-btn-corner-all calculate-calories">Calculate</button>
+        </div>
+    </form>
+</div>
+<div data-role="footer" data-position="fixed" class="footer">
+    <div data-role="navbar">
+        <ul>
+            <% if(typeof id !== "undefined") { %>
+            <li>
+                <button class="ui-btn btn-save">Save</button>
+            </li>
+            <li><button class="ui-btn btn-delete">Delete</button></li>
+            <% } else { %>
+            <li>
+                <button class="ui-btn btn-save">Add Diet Plan</button>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

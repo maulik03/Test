@@ -1,0 +1,45 @@
+<div data-role="header" class="header">
+    <a href="#homepage" data-transition="slidefade"
+       class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-back ui-btn-icon-notext ui-shadow"></a>
+
+    <h1>BMI</h1>
+    <a href="#settings" class="ui-btn-right ui-btn ui-corner-all  ui-btn-icon-notext ui-shadow ui-icon-gear"></a>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#plan" data-transition="slidefade">Diet Plan</a></li>
+            <li><a href="#bmi">BMI Calculator</a></li>
+        </ul>
+    </div>
+</div>
+<div data-role="main" class="ui-content">
+    <form>
+        <% if(height == 'feet') { %>
+        <div class="ui-field-contain">
+            <label for="feet-bmi">Height (<%- height %>):</label>
+
+            <div class="inline-input">
+                <input type="text" name="height" id="feet-bmi" value="" placeholder="feet"/>
+                <input type="text" name="height" id="inches-bmi" value="" placeholder="inches"/>
+            </div>
+        </div>
+        <% } else {%>
+        <div class="ui-field-contain">
+            <label for="height-bmi">Height (<%- height %>):</label>
+            <input type="text" name="title" id="height-bmi" value="" placeholder="cm"/>
+        </div>
+        <% } %>
+        <div class="ui-field-contain">
+            <label for="weight-bmi">Weight (<%- weight %>):</label>
+            <input type="text" name="weight" id="weight-bmi" value="" placeholder="<%- weight %>"/>
+        </div>
+        <div class=" center-wrapper ">
+            <button class="ui-btn ui-btn-inline ui-btn-corner-all calculate-bmi">Calculate</button>
+        </div>
+        <div class="ui-field-contain">
+            <label for="your-bmi">Your BMI:</label>
+
+            <p class="your-bmi"></p>
+        </div>
+    </form>
+</div>

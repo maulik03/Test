@@ -1,0 +1,24 @@
+<div data-role="header" class="header">
+    <a href="#bmi" data-transition="slidefade"
+       class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-back ui-btn-icon-notext ui-shadow"></a>
+
+    <h1>Settings</h1>
+</div>
+<div data-role="main" class="ui-content">
+    <form>
+        <div class="ui-field-contain">
+            <label for="weight-settings">Weight:</label>
+            <select name="weight" id="weight-settings" data-role="slider">
+                <option value="kg" <% if(weight == 'kg') { %>selected="selected"<%}%> >kg</option>
+                <option value="lb" <% if(weight == 'lb') { %>selected="selected"<%}%> >lb</option>
+            </select>
+        </div>
+        <div class="ui-field-contain">
+            <label for="height-settings">Height:</label>
+            <select name="weight" id="height-settings" data-role="slider">
+                <option value="cm" <% if(height == 'cm') { %>selected="selected"<%}%> >cm</option>
+                <option value="feet" <% if(height == 'feet') { %>selected="selected"<%}%>>feet</option>
+            </select>
+        </div>
+    </form>
+</div>

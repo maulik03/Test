@@ -1,0 +1,16 @@
+<div class="inline-form">
+    <div class="wrapper">
+        <div class="content">
+            <select name="food[]" id="food-<%- foodIndex %>">
+                <option value="" selected="selected">Select Food</option>
+                <% _.each(calories, function(calorie, index){ %>
+                <option value="<%- index %>"><%- calorie[0] %> (<%- calorie[1] %>) - <%- calorie[2] %></option>
+                <% }); %>
+            </select>
+        </div>
+    </div>
+
+    <div class="right">
+        <button class="ui-btn ui-btn-inline ui-btn-corner-all ui-btn ui-icon-delete ui-btn-icon-notext ui-shadow delete-food"></button>
+    </div>
+</div>

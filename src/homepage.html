@@ -1,0 +1,23 @@
+<div data-role="header" class="header">
+    <h1>Diet Plan & BMI Calculator</h1>
+    <a href="#settings" class="ui-btn-right ui-btn ui-corner-all  ui-btn-icon-notext ui-shadow ui-icon-gear"></a>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#plan" data-transition="slidefade">Diet Plan</a></li>
+            <li><a href="#bmi">BMI Calculator</a></li>
+        </ul>
+    </div>
+</div>
+<div data-role="main">
+    <p class="center-wrapper">Today's Date</p>
+
+    <p class="center-wrapper date-st"><%- date %></p>
+
+    <p class="center-wrapper">How much calories left</p>
+    <% console.log(left); if(typeof left !== "undefined") { %>
+    <p class="center-wrapper left-st"><%- left %></p>
+    <% } else { %>
+    <p class="no-goal center-wrapper">You don't have any goals</p>
+    <% } %>
+</div>
