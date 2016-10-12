@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+.inline-form {
+}
+
+.inline-form .wrapper {
+    float: left;
+    width: 100%;
+}
+
+.inline-form .wrapper .content {
+    margin: -9px 45px 0 0;  /* 0 RC 0 LC */
+}
+
+.inline-form .left {
+    float: left;
+    width: 92px; /* LC */
+    margin-left: -100%;
+}
+
+.inline-form .text {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    display: block;
+    font-size: 16px;
+}
+
+.inline-form .right {
+    float: left;
+    width: 40px; /* RC */
+    margin-left: -40px; /* -RC */
+}
+
+.inline-form .footer{
+    clear: left;
+}
+
+.center-wrapper{
+    text-align: center;
+}
+.center-wrapper * {
+    margin: 0 auto;
+}
+
+.date-st {
+    font-size: 24px;
+    margin: 2px;
+    font-family: Roboto-Light;
+}
+
+.left-st, .your-bmi {
+    font-family: Roboto-Light;
+    font-size: 54px;
+    margin: 2px;
+}
+
+.inline-input div {
+    width: 38%;
+    display: inline-table;
+}
+
+.ui-field-contain {
+    border-bottom: 0 none;
+}
+
+.ui-header {
+    border-bottom:1px solid #cecece !important;
+}
+
+.ui-content button {
+    background-color: #229b5b !important;
+    border-color: #207448 !important;
+    color:#fff !important;
+}
